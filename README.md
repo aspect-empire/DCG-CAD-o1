@@ -16,12 +16,10 @@ Engineering CAD generation depends on coordinated reasoning over requirements, c
 - one offline synthetic compartment/foundation example.
 
 ## Effect demonstration
-<video width="630" height="300" src="https://github.com/user-attachments/assets/52720db3-ec60-4de9-aa48-91a880351609"></video>
+The video demonstrates the process of dynamic graph recording the spatial constraints read from the cabin scene and the conversion of design constraints into model parameters during the design process, and finally outputting the geometric model
 
+<video width="630" height="300" src="https://github.com/user-attachments/assets/0895ebf5-1081-4010-a5fe-9487b57c3be8"></video>
 
-
-
-https://github.com/user-attachments/assets/52720db3-ec60-4de9-aa48-91a880351609
 
 
 ## Installation
