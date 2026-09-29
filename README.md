@@ -16,8 +16,12 @@ Engineering CAD generation depends on coordinated reasoning over requirements, c
 - one offline synthetic compartment/foundation example.
 
 ## Effect demonstration
-<video width="630" height="300" src="https://user-images.githubusercontent.com/126239/151127893-5c98ba8d-c431-4a25-bb1f-e0b33645a2b6.mp4"></video>
+<video width="630" height="300" src="https://github.com/user-attachments/assets/52720db3-ec60-4de9-aa48-91a880351609"></video>
 
+
+
+
+https://github.com/user-attachments/assets/52720db3-ec60-4de9-aa48-91a880351609
 
 
 ## Installation
