@@ -1,0 +1,53 @@
+{
+  "scene_id": "SYNTHETIC_SINGLE_EQUIPMENT",
+  "compartment": {
+    "shape_type": "rectangular",
+    "deck": {
+      "id": "DECK_SYNTHETIC",
+      "origin": [0, 0, 0],
+      "length_x": 3000,
+      "width_y": 2400,
+      "thickness": 20,
+      "shape_type": "rectangular"
+    },
+    "deck_longitudinals": {"enabled": false, "y_positions": [], "height": 0, "thickness": 0},
+    "deck_transverses": {"enabled": false, "x_positions": [], "height": 0, "thickness": 0},
+    "bulkheads": [],
+    "bulkhead_stiffeners": []
+  },
+  "equipment": [
+    {
+      "id": "EQ_SYNTHETIC",
+      "equipment_type": "box",
+      "origin": [900, 800, 300],
+      "size": [600, 400, 700],
+      "weight": 180,
+      "ground_clearance": 300,
+      "mounting_face": {
+        "face_id": "MOUNT_FACE_SYNTHETIC",
+        "shape_type": "rectangle",
+        "normal": [0, 0, -1],
+        "size": [600, 400]
+      },
+      "mounting_holes": [
+        {"id": "H1", "local_position": [60, 60, 0], "diameter": 18},
+        {"id": "H2", "local_position": [540, 60, 0], "diameter": 18},
+        {"id": "H3", "local_position": [60, 340, 0], "diameter": 18},
+        {"id": "H4", "local_position": [540, 340, 0], "diameter": 18}
+      ],
+      "mounting_features": [
+        {"id": "RAIL_LEFT", "type": "rectangular_rail", "origin": [0, 35, 0], "size": [600, 80], "height": 45},
+        {"id": "RAIL_RIGHT", "type": "rectangular_rail", "origin": [0, 285, 0], "size": [600, 80], "height": 45}
+      ]
+    }
+  ],
+  "foundation_design_zone": {
+    "id": "FDZ_SYNTHETIC",
+    "center": [1200, 1000, 150],
+    "size": [800, 600, 300],
+    "related_equipment": "EQ_SYNTHETIC"
+  },
+  "pipes": [],
+  "cables": [],
+  "expected_interferences": []
+}

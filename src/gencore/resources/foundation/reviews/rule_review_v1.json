@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "review_status": "prototype_rule_set_curated",
+  "production_authority": "engineering_review_required",
+  "precedence_decision": "Document 02 explicit updates override Document 01; unresolved incompatibility blocks hard output.",
+  "unresolved_conflicts": [],
+  "advisory_clause_ids": [
+    "D01-P143",
+    "D01-P216",
+    "D02-P40",
+    "D02-P41",
+    "D02-P42",
+    "D02-P314-318"
+  ],
+  "verification_required_topics": [
+    "strength",
+    "stiffness",
+    "natural_frequency",
+    "impedance",
+    "stability",
+    "constructability",
+    "coating",
+    "maintenance_access"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "transitions": {
+    "S0_INITIALIZE": {
+      "evidence_ready": "S1_ACTIVATE_CONSTRAINTS",
+      "await_evidence": "S0_INITIALIZE"
+    },
+    "S1_ACTIVATE_CONSTRAINTS": {
+      "constraints_ready": "S2_PLAN_GEOMETRY",
+      "request_evidence": "S0_INITIALIZE"
+    },
+    "S2_PLAN_GEOMETRY": {
+      "plan_ready": "S3_EXECUTE_CAD",
+      "revise_constraints": "S1_ACTIVATE_CONSTRAINTS"
+    },
+    "S3_EXECUTE_CAD": {
+      "cad_completed": "S4_VALIDATE",
+      "cad_failed": "S5_REPAIR_OR_HANDOFF",
+      "replan_geometry": "S2_PLAN_GEOMETRY"
+    },
+    "S4_VALIDATE": {
+      "validation_passed": "S4_VALIDATE",
+      "validation_failed": "S5_REPAIR_OR_HANDOFF",
+      "missing_evidence": "S1_ACTIVATE_CONSTRAINTS"
+    },
+    "S5_REPAIR_OR_HANDOFF": {
+      "evidence_required": "S1_ACTIVATE_CONSTRAINTS",
+      "human_required": "S5_REPAIR_OR_HANDOFF",
+      "replan_geometry": "S2_PLAN_GEOMETRY",
+      "retry_cad": "S3_EXECUTE_CAD",
+      "revalidate": "S4_VALIDATE"
+    }
+  }
+}

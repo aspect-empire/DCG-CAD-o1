@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gencore-method"
+version = "0.1.0"
+description = "Evidence-governed progressive geometry-generation method core"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["matplotlib>=3.8", "networkx>=3.0"]
+
+[project.optional-dependencies]
+agent = ["deepagents>=0.6.12,<0.7; python_version >= '3.11'"]
+catia = [
+  "pycatia>=0.8,<1; sys_platform == 'win32'",
+  "pywin32>=306,<400; sys_platform == 'win32'",
+]
+dev = ["build>=1.2", "pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gencore", "agents"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "--basetemp=.pytest-workbench --import-mode=importlib"

@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "curation_status": "code_extracted_then_semantically_curated",
+  "clauses": [
+    {
+      "clause_id": "D01-T01",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "table:equipment_weight_thickness",
+      "normalized_semantics": "按设备重量分档选择面板及腹板/肘板最小厚度。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P113",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:113",
+      "normalized_semantics": "运动设备或完全壁挂设备厚度提高一档；多种提高条件通常不叠加。",
+      "normative_strength": "should",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P119",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:119",
+      "normalized_semantics": "安装孔中心到自由边距离不小于孔径的2倍。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P129",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:129",
+      "normalized_semantics": "腹板或肘板中心距安装孔中心不小于1.5D，且至少一个构件位于3D范围内。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P143",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:143",
+      "normalized_semantics": "高基座满足高度和载荷条件时建议设置腹板或肘板加强条，并给出厚度与宽度经验建议。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D01-P207",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:207",
+      "normalized_semantics": "开孔面积通常不超过格子面积的1/2，U形孔需要局部加强。",
+      "normative_strength": "should",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P216",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:216",
+      "normalized_semantics": "肘板布置、间距和倒置形式连续性属于构造布置建议。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D01-P230",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:230",
+      "normalized_semantics": "加强筋格子间距不小于纵向间距且不大于其2倍。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P235",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:235",
+      "normalized_semantics": "流水孔直径不小于20mm且不大于腹板高度的1/4。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P349",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:349",
+      "normalized_semantics": "受平面载荷开孔面积不超过格子面积的1/2；超过1/3时设置边缘扁钢。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P350",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:350",
+      "normalized_semantics": "开孔边缘到支承板边缘距离不小于20倍板厚。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P351",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:351",
+      "normalized_semantics": "开孔圆角半径大于200mm时设置边缘扁钢。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P398",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:398",
+      "normalized_semantics": "主要构件贯穿孔高度超过构件高度1/2时设置复板加强。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D01-P403",
+      "source_id": "foundation-rule-doc-01",
+      "locator": "paragraph:403",
+      "normalized_semantics": "直接开孔仅在最大尺寸不超过10倍板厚且各净距均大于20倍板厚时允许。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-T01",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "table:unit_area_load_thickness",
+      "normalized_semantics": "按安装面单位面积质量指标分档选择面板及腹板/肘板最小厚度。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P23",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:23",
+      "normalized_semantics": "单位面积指标等于设备质量、最大工作载荷等效质量、油水及自带管路质量之和除以安装面长宽。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P34",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:34",
+      "normalized_semantics": "运动设备的厚度等级提高一档。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P35",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:35",
+      "normalized_semantics": "存在平行于面板的载荷时厚度等级提高一档。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P36",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:36",
+      "normalized_semantics": "多方向载荷分别计算并选择要求最高的厚度等级。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P37",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:37",
+      "normalized_semantics": "多个厚度提高条件通常不叠加。",
+      "normative_strength": "should",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P40",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:40",
+      "normalized_semantics": "材料通常采用907A；厚度大于16mm的板和宽度大于120mm的球扁钢通常采用921A。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D02-P41",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:41",
+      "normalized_semantics": "焊接垫板通常采用E36。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D02-P42",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:42",
+      "normalized_semantics": "厚度大于35mm的板通常采用E36。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D02-P307",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:307",
+      "normalized_semantics": "腹板或肘板中心距安装孔中心为1.5D至3D，且孔中心到自由边距离不小于2D。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P314-318",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraphs:314-318",
+      "normalized_semantics": "肘板形式选择取决于安装方式、结构对齐和施工条件，输出为构造建议。",
+      "normative_strength": "should",
+      "classification": "advisory"
+    },
+    {
+      "clause_id": "D02-P319-325",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraphs:319-325",
+      "normalized_semantics": "肘板按安装与受力条件布置，肘板间距一般不小于200mm。",
+      "normative_strength": "should",
+      "classification": "deterministic"
+    },
+    {
+      "clause_id": "D02-P341",
+      "source_id": "foundation-rule-doc-02",
+      "locator": "paragraph:341",
+      "normalized_semantics": "推进系统适用条件下相关构件距离控制为孔径的2至2.5倍。",
+      "normative_strength": "shall",
+      "classification": "deterministic"
+    }
+  ]
+}

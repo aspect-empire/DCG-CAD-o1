@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this method package, please cite the associated article."
+title: "GenCore: evidence-governed progressive geometry-generation method core"
+type: software
+version: 0.1.0
+date-released: 2026-09-28
+repository-code: "https://github.com/aspect-empire/gencore"
+authors:
+  - name: "GenCore contributors"
+keywords:
+  - CAD generation
+  - engineering knowledge
+  - intelligent agents
+  - dynamic constraint graph

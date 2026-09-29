@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "minimum_validation_coverage": 1.0,
+  "required_cad_evidence": [
+    "openable",
+    "updateable",
+    "exportable"
+  ],
+  "terminal_decisions": [
+    "ACCEPTED",
+    "ABSTAINED",
+    "REJECTED",
+    "HUMAN_REQUIRED"
+  ]
+}

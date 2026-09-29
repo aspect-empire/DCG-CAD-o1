@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "roles": {
+    "coordinator": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "DesignDecision",
+        "GraphTransaction",
+        "Task"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "supersede_node",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "scene_constraint": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "Constraint",
+        "DerivedSpatialObject",
+        "EngineeringObject",
+        "Evidence",
+        "GeometryBoundary",
+        "GeometryKeypoint"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "solution_parameter": {
+      "readable_views": [
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "CandidateTemplate",
+        "Derivation",
+        "ParameterDomain",
+        "ParameterValue"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "supersede_node",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "geometry_planning": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "FeatureBinding",
+        "ModelPlan",
+        "OperationPlan",
+        "ValidationPlan"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "bind_reference",
+        "set_node_state",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "cad_executor": {
+      "readable_views": [
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "Artifact",
+        "Execution",
+        "FailureSignature",
+        "GeometryBoundary",
+        "GeometryKeypoint",
+        "GeometryReference",
+        "ModelFeature"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "bind_reference",
+        "set_node_state",
+        "update_attributes"
+      ],
+      "model_enabled": false
+    },
+    "validation": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "DerivedSpatialObject",
+        "Evidence",
+        "FailureSignature",
+        "Validation"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "repair_reflection": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "ImpactSubgraph",
+        "RecoveryAction",
+        "RepairPlan",
+        "Task"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "update_attributes"
+      ],
+      "model_enabled": true
+    },
+    "expert": {
+      "readable_views": [
+        "intent_requirement",
+        "product_function",
+        "parameter_rule",
+        "geometry_spatial",
+        "process_tool",
+        "result_evidence"
+      ],
+      "writable_node_types": [
+        "ConstraintCandidate",
+        "Evidence",
+        "ExpertDecision",
+        "RuleCandidate"
+      ],
+      "writable_operation_kinds": [
+        "add_node",
+        "add_edge",
+        "bind_evidence",
+        "set_node_state",
+        "supersede_node",
+        "update_attributes"
+      ],
+      "model_enabled": false
+    }
+  }
+}

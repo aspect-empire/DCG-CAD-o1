@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "foundation-case-matching-weights-v1",
+  "dimensions": [
+    {
+      "field": "equipment_type",
+      "kind": "enum",
+      "weight": "0.20"
+    },
+    {
+      "field": "mount_surface",
+      "kind": "enum",
+      "weight": "0.20"
+    },
+    {
+      "field": "dry_mass_kg",
+      "kind": "numeric",
+      "weight": "0.20",
+      "min": "0",
+      "max": "5000"
+    },
+    {
+      "field": "installation_length_mm",
+      "kind": "numeric",
+      "weight": "0.15",
+      "min": "0",
+      "max": "3000"
+    },
+    {
+      "field": "installation_width_mm",
+      "kind": "numeric",
+      "weight": "0.15",
+      "min": "0",
+      "max": "3000"
+    },
+    {
+      "field": "required_features",
+      "kind": "set",
+      "weight": "0.10"
+    }
+  ]
+}

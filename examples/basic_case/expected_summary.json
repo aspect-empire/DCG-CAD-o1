@@ -1,0 +1,29 @@
+{
+  "evidence_mode": "scripted_simulation",
+  "decision": "ACCEPTED",
+  "stage_history": [
+    "S0_INITIALIZE",
+    "S1_ACTIVATE_CONSTRAINTS",
+    "S2_PLAN_GEOMETRY",
+    "S3_EXECUTE_CAD",
+    "S4_VALIDATE"
+  ],
+  "cad_operations": [
+    "build_compartment_scene",
+    "create_foundation",
+    "update_parameters",
+    "update_holes",
+    "export",
+    "check_interference"
+  ],
+  "predicted_affected": [],
+  "actual_rebuilt": [],
+  "evidence_coverage": 1.0,
+  "dispatched_task_ids": [
+    "task:scene",
+    "task:solution",
+    "task:geometry",
+    "task:cad",
+    "task:validate"
+  ]
+}

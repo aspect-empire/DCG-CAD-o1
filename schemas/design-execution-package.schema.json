@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GenCore Design Execution Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "package_id",
+    "schema_version",
+    "task_id",
+    "scenario_id",
+    "run_id",
+    "graph_version",
+    "parent_version",
+    "stage",
+    "design_intent",
+    "visible_evidence",
+    "unknown_constraints",
+    "conflicts",
+    "candidate_templates",
+    "spatial_context",
+    "constraints",
+    "parameters",
+    "geometry_references",
+    "model_plan",
+    "operation_sequence",
+    "validation_plan",
+    "fallback_policy",
+    "read_set",
+    "write_set",
+    "graph_proposals",
+    "commit_results",
+    "artifact_refs",
+    "validation_evidence",
+    "provenance",
+    "current_decision",
+    "next_event"
+  ],
+  "properties": {
+    "package_id": {"type": "string", "pattern": "^dep:[0-9a-f]{64}$"},
+    "schema_version": {"const": "1.0"},
+    "task_id": {"type": "string", "minLength": 1},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "graph_version": {"type": "string", "pattern": "^ver:[0-9a-f]{64}$"},
+    "parent_version": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^ver:[0-9a-f]{64}$"}
+      ]
+    },
+    "stage": {
+      "enum": [
+        "S0_INITIALIZE",
+        "S1_ACTIVATE_CONSTRAINTS",
+        "S2_PLAN_GEOMETRY",
+        "S3_EXECUTE_CAD",
+        "S4_VALIDATE",
+        "S5_REPAIR_OR_HANDOFF"
+      ]
+    },
+    "design_intent": {"type": "object"},
+    "visible_evidence": {"$ref": "#/$defs/recordArray"},
+    "unknown_constraints": {"$ref": "#/$defs/recordArray"},
+    "conflicts": {"$ref": "#/$defs/recordArray"},
+    "candidate_templates": {"$ref": "#/$defs/recordArray"},
+    "spatial_context": {"type": "object"},
+    "constraints": {"$ref": "#/$defs/recordArray"},
+    "parameters": {"$ref": "#/$defs/recordArray"},
+    "geometry_references": {"$ref": "#/$defs/recordArray"},
+    "model_plan": {"type": "object"},
+    "operation_sequence": {"$ref": "#/$defs/recordArray"},
+    "validation_plan": {"$ref": "#/$defs/recordArray"},
+    "fallback_policy": {"type": "object"},
+    "read_set": {"$ref": "#/$defs/stringArray"},
+    "write_set": {"$ref": "#/$defs/stringArray"},
+    "graph_proposals": {"$ref": "#/$defs/recordArray"},
+    "commit_results": {"$ref": "#/$defs/recordArray"},
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["locator", "sha256"],
+        "properties": {
+          "locator": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+        }
+      }
+    },
+    "validation_evidence": {"$ref": "#/$defs/recordArray"},
+    "provenance": {"$ref": "#/$defs/recordArray"},
+    "current_decision": {
+      "enum": ["RUNNING", "ACCEPTED", "ABSTAINED", "REJECTED", "HUMAN_REQUIRED"]
+    },
+    "next_event": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "recordArray": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  }
+}

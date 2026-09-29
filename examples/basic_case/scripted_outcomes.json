@@ -1,0 +1,73 @@
+{
+  "max_steps": 12,
+  "agent_outcomes": {
+    "task:scene": {
+      "status": "completed",
+      "evidence_refs": ["evidence:synthetic-scene"],
+      "record": {"scene_id": "synthetic-compartment"}
+    },
+    "task:solution": {
+      "status": "completed",
+      "evidence_refs": ["evidence:template", "evidence:parameters"],
+      "record": {"template_id": "rectangular-frame"}
+    },
+    "task:geometry": {
+      "status": "completed",
+      "evidence_refs": ["evidence:geometry-plan"],
+      "record": {"plan_id": "synthetic-plan"}
+    },
+    "task:cad": {
+      "status": "completed",
+      "evidence_refs": ["evidence:simulated-cad"],
+      "record": {"model_version": "synthetic-model-v1"}
+    },
+    "task:validate": {
+      "status": "completed",
+      "evidence_refs": ["evidence:validation"],
+      "record": {"coverage": 1.0}
+    }
+  },
+  "candidate_match": {
+    "selected": "rectangular-frame",
+    "score": "0.950000",
+    "evidence_coverage": "1.000000",
+    "recompute_parameters": ["plate_thickness_mm", "base_height_mm", "hole_layout"]
+  },
+  "parameter_derivations": {
+    "plate_thickness_mm": {
+      "value": "10",
+      "source_rule": "synthetic-rule",
+      "state": "derived"
+    },
+    "base_height_mm": {
+      "value": "120",
+      "source_rule": "synthetic-envelope",
+      "state": "derived"
+    }
+  },
+  "cad_manifests": [
+    {"stage": "create_foundation", "status": "completed"},
+    {"stage": "update_holes", "status": "completed"},
+    {"stage": "export", "formats": ["STEP", "STL"], "status": "completed"}
+  ],
+  "final_evaluation": {
+    "proven_unsatisfiable": false,
+    "critical_evidence_missing": false,
+    "template_insufficient": false,
+    "reference_ambiguous": false,
+    "budget_exhausted": false,
+    "cad": {
+      "openable": true,
+      "updateable": true,
+      "exportable": true
+    },
+    "hard_constraints": [
+      {"constraint_id": "mounting-zone", "status": "passed"},
+      {"constraint_id": "interference", "status": "passed"}
+    ],
+    "critical_unknowns": [],
+    "conflicts": [],
+    "validation_coverage": 1.0,
+    "evidence_refs": ["evidence:simulated-cad", "evidence:parameters", "evidence:validation"]
+  }
+}

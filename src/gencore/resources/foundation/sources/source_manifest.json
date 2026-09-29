@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "precedence_policy": "explicit_doc02_then_doc01_else_conflicted",
+  "documents": [
+    {
+      "source_id": "foundation-rule-doc-01",
+      "title": "水面舰船基座精细化设计要求-非密",
+      "path": "external-source/foundation-rule-doc-01.docx",
+      "sha256": "571673c017df25a58cd0f075da7d87d0656dfa9d4a8bf0dc79b9ccb25fb8d8db",
+      "maturity": "base",
+      "priority": 10
+    },
+    {
+      "source_id": "foundation-rule-doc-02",
+      "title": "设备基座设计原则要求（建模要求）-更新中-非密",
+      "path": "external-source/foundation-rule-doc-02.docx",
+      "sha256": "184c44ac8369df7728333376bc75bee911a2900a202f298a278ca97de017c08d",
+      "maturity": "updated_draft",
+      "priority": 20
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "roles": {
+    "coordinator": [
+      "orchestration.state.inspect",
+      "orchestration.tasks.preview"
+    ],
+    "scene_constraint": [
+      "geometry.cad.build_compartment_scene",
+      "geometry.scene.assemble",
+      "geometry.scene.export_graph",
+      "geometry.scene.validate"
+    ],
+    "solution_parameter": [
+      "foundation.case_matching.match",
+      "foundation.parameters.calculate"
+    ],
+    "geometry_planning": [
+      "geometry.cad.probe",
+      "geometry.full_lt.capabilities",
+      "geometry.full_lt.validate_plan"
+    ],
+    "cad_executor": [
+      "geometry.cad.assemble_foundation",
+      "geometry.cad.build_compartment_scene",
+      "geometry.cad.create_foundation",
+      "geometry.cad.export",
+      "geometry.cad.probe",
+      "geometry.cad.relocate_references",
+      "geometry.cad.rollback",
+      "geometry.cad.update_gussets",
+      "geometry.cad.update_holes",
+      "geometry.cad.update_model",
+      "geometry.cad.update_parameters"
+    ],
+    "validation": [
+      "geometry.cad.check_interference",
+      "geometry.interference.build_report",
+      "geometry.interference.normalize",
+      "geometry.scene.validate"
+    ],
+    "repair_reflection": [
+      "geometry.full_lt.capabilities",
+      "graph.query_affected"
+    ],
+    "expert": []
+  }
+}

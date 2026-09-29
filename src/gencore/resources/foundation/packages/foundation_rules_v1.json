@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "package_id": "foundation-rules:v1",
+  "rules": [
+    {
+      "rule_id": "formula.unit_area_mass.v1",
+      "scope": "load.unit_area_mass",
+      "source_clause_id": "D02-P23",
+      "priority": 20,
+      "expression": {"op": "formula", "formula": "total_mass_kg / installation_area_m2"}
+    },
+    {
+      "rule_id": "thickness.unit_area.v1",
+      "scope": "thickness.band",
+      "source_clause_id": "D02-T01",
+      "priority": 20,
+      "expression": {
+        "op": "decision_table",
+        "bands": [
+          {"upper_inclusive": "60", "panel_mm": "3", "web_bracket_mm": "3"},
+          {"upper_inclusive": "100", "panel_mm": "4", "web_bracket_mm": "3"},
+          {"upper_inclusive": "300", "panel_mm": "5", "web_bracket_mm": "4"},
+          {"upper_inclusive": "500", "panel_mm": "6", "web_bracket_mm": "5"},
+          {"upper_inclusive": "1000", "panel_mm": "8", "web_bracket_mm": "6"},
+          {"upper_inclusive": "2000", "panel_mm": "10", "web_bracket_mm": "8"},
+          {"upper_inclusive": "5000", "panel_mm": "12", "web_bracket_mm": "10"},
+          {"upper_inclusive": "10000", "panel_mm": "16", "web_bracket_mm": "12"},
+          {"upper_inclusive": null, "panel_mm": "20", "web_bracket_mm": "16"}
+        ]
+      }
+    },
+    {
+      "rule_id": "adjust.moving.v1",
+      "scope": "thickness.adjustment.moving",
+      "source_clause_id": "D02-P34",
+      "priority": 20,
+      "expression": {"op": "increase_grade", "when": "moving_equipment", "steps": 1}
+    },
+    {
+      "rule_id": "adjust.in_plane.v1",
+      "scope": "thickness.adjustment.in_plane",
+      "source_clause_id": "D02-P35",
+      "priority": 20,
+      "expression": {"op": "increase_grade", "when": "in_plane_load", "steps": 1}
+    },
+    {
+      "rule_id": "adjust.max_direction.v1",
+      "scope": "thickness.adjustment.direction",
+      "source_clause_id": "D02-P36",
+      "priority": 20,
+      "expression": {"op": "select_max", "input": "directional_band_indices"}
+    },
+    {
+      "rule_id": "adjust.non_stacking.v1",
+      "scope": "thickness.adjustment.combination",
+      "source_clause_id": "D02-P37",
+      "priority": 20,
+      "expression": {"op": "non_stacking", "input": "grade_increases", "combine": "max"}
+    },
+    {
+      "rule_id": "geometry.hole_free_edge.v1",
+      "scope": "geometry.hole_free_edge",
+      "source_clause_id": "D02-P307",
+      "priority": 20,
+      "expression": {"op": "minimum_ratio", "value": "hole_edge_distance_mm", "reference": "hole_diameter_mm", "ratio": "2"}
+    },
+    {
+      "rule_id": "geometry.support_hole_distance.v1",
+      "scope": "geometry.support_hole_distance",
+      "source_clause_id": "D02-P307",
+      "priority": 20,
+      "expression": {"op": "range_ratio", "value": "support_hole_distance_mm", "reference": "hole_diameter_mm", "minimum": "1.5", "maximum": "3"}
+    },
+    {
+      "rule_id": "geometry.bracket_spacing.v1",
+      "scope": "geometry.bracket_spacing",
+      "source_clause_id": "D02-P319-325",
+      "priority": 20,
+      "expression": {"op": "minimum", "value": "bracket_spacing_mm", "minimum": "200"}
+    },
+    {
+      "rule_id": "geometry.drainage_hole.v1",
+      "scope": "geometry.drainage_hole",
+      "source_clause_id": "D01-P235",
+      "priority": 10,
+      "expression": {"op": "range", "value": "drainage_hole_diameter_mm", "minimum": "20", "maximum_formula": "web_height_mm / 4"}
+    },
+    {
+      "rule_id": "geometry.opening_area.v1",
+      "scope": "geometry.opening_area",
+      "source_clause_id": "D01-P349",
+      "priority": 10,
+      "expression": {"op": "ratio_limit", "value": "opening_area_mm2", "reference": "cell_area_mm2", "maximum": "0.5", "reinforce_above": "0.333333333333333333"}
+    },
+    {
+      "rule_id": "geometry.opening_edge.v1",
+      "scope": "geometry.opening_edge",
+      "source_clause_id": "D01-P350",
+      "priority": 10,
+      "expression": {"op": "minimum_ratio", "value": "opening_edge_distance_mm", "reference": "plate_thickness_mm", "ratio": "20"}
+    },
+    {
+      "rule_id": "geometry.opening_radius.v1",
+      "scope": "geometry.opening_radius",
+      "source_clause_id": "D01-P351",
+      "priority": 10,
+      "expression": {"op": "conditional", "when": "opening_radius_mm > 200", "then": "edge_flat_bar_required"}
+    },
+    {
+      "rule_id": "geometry.penetration_doubler.v1",
+      "scope": "geometry.penetration_doubler",
+      "source_clause_id": "D01-P398",
+      "priority": 10,
+      "expression": {"op": "ratio_limit", "value": "penetration_height_mm", "reference": "member_height_mm", "trigger_above": "0.5", "then": "doubler_required"}
+    },
+    {
+      "rule_id": "geometry.direct_opening.v1",
+      "scope": "geometry.direct_opening",
+      "source_clause_id": "D01-P403",
+      "priority": 10,
+      "expression": {"op": "permission", "maximum_size_ratio": "10", "minimum_clearance_ratio_exclusive": "20", "reference": "plate_thickness_mm"}
+    },
+    {
+      "rule_id": "geometry.propulsion_distance.v1",
+      "scope": "geometry.propulsion_distance",
+      "source_clause_id": "D02-P341",
+      "priority": 20,
+      "expression": {"op": "range_ratio", "when": "system_type == propulsion", "value": "propulsion_member_distance_mm", "reference": "hole_diameter_mm", "minimum": "2", "maximum": "2.5"}
+    }
+  ]
+}

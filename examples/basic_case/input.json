@@ -1,0 +1,57 @@
+{
+  "task_id": "SYNTHETIC-FOUNDATION-001",
+  "scenario_id": "SYNTHETIC-COMPARTMENT",
+  "run_id": "synthetic-foundation",
+  "stage": "S0_INITIALIZE",
+  "design_intent": {
+    "object": "single-equipment foundation",
+    "requires_case_matching": true,
+    "requires_geometry_plan": true
+  },
+  "spatial_context": {
+    "compartment": {
+      "shape": "rectangular",
+      "length_mm": 3000,
+      "width_mm": 2400,
+      "height_mm": 2200
+    },
+    "equipment": {
+      "shape": "box",
+      "size_mm": [600, 400, 700],
+      "origin_mm": [900, 800, 300],
+      "mounting_face": "bottom",
+      "mounting_holes_mm": [
+        [60, 60],
+        [540, 60],
+        [60, 340],
+        [540, 340]
+      ]
+    },
+    "foundation_design_zone": {
+      "center_mm": [1200, 1000, 150],
+      "size_mm": [800, 600, 300]
+    }
+  },
+  "unknown_constraints": [
+    {
+      "constraint_id": "scene:mounting-zone",
+      "critical": true
+    }
+  ],
+  "model_plan": {
+    "template": "rectangular-frame",
+    "strategy": "progressive"
+  },
+  "operation_sequence": [
+    {"kind": "build_compartment_scene"},
+    {"kind": "create_foundation"},
+    {"kind": "update_parameters"},
+    {"kind": "update_holes"},
+    {"kind": "export"},
+    {"kind": "check_interference"}
+  ],
+  "validation_plan": [
+    {"check_id": "cad", "kind": "model_updateable", "required": true},
+    {"check_id": "clash", "kind": "interference", "required": true}
+  ]
+}

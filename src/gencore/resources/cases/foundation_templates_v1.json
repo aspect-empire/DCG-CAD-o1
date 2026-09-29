@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "foundation-templates-v1",
+  "templates": [
+    {
+      "template_id": "frame-deck-heavy",
+      "name_zh": "框架式甲板重载基座",
+      "hard_fields": {
+        "mount_surface": ["deck"]
+      },
+      "match_values": {
+        "equipment_type": "pump",
+        "mount_surface": "deck",
+        "dry_mass_kg": "1000",
+        "installation_length_mm": "850",
+        "installation_width_mm": "620",
+        "required_features": ["holes", "gussets"]
+      },
+      "reusable_parameters": ["mount_surface", "frame_layout", "support_pattern"],
+      "recompute_parameters": ["plate_thickness_mm", "base_height_mm", "hole_layout"],
+      "artifact_refs": [
+        {
+          "artifact_id": "cad-template:LT",
+          "locator": "cad_models/libraries/full_lt/LT.CATPart",
+          "media_type": "application/x-catia-part"
+        }
+      ]
+    },
+    {
+      "template_id": "twin-rail-deck",
+      "name_zh": "双纵梁甲板基座",
+      "hard_fields": {
+        "mount_surface": ["deck"]
+      },
+      "match_values": {
+        "equipment_type": "pump",
+        "mount_surface": "deck",
+        "dry_mass_kg": "650",
+        "installation_length_mm": "760",
+        "installation_width_mm": "520",
+        "required_features": ["holes"]
+      },
+      "reusable_parameters": ["mount_surface", "rail_layout"],
+      "recompute_parameters": ["rail_spacing_mm", "plate_thickness_mm", "gusset_layout"],
+      "artifact_refs": [
+        {
+          "artifact_id": "cad-template:rail",
+          "locator": "cad_models/libraries/foundation/twin_rail.CATPart",
+          "media_type": "application/x-catia-part"
+        }
+      ]
+    },
+    {
+      "template_id": "wall-mounted",
+      "name_zh": "壁挂式基座",
+      "hard_fields": {
+        "mount_surface": ["wall", "bulkhead"]
+      },
+      "match_values": {
+        "equipment_type": "panel",
+        "mount_surface": "wall",
+        "dry_mass_kg": "250",
+        "installation_length_mm": "600",
+        "installation_width_mm": "400",
+        "required_features": ["holes", "gussets"]
+      },
+      "reusable_parameters": ["mount_surface", "wall_bracket_layout"],
+      "recompute_parameters": ["plate_thickness_mm", "anchor_layout"],
+      "artifact_refs": [
+        {
+          "artifact_id": "cad-template:XB",
+          "locator": "cad_models/libraries/full_lt/XB.CATPart",
+          "media_type": "application/x-catia-part"
+        }
+      ]
+    }
+  ]
+}
