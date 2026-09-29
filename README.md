@@ -1,9 +1,7 @@
-# GenCore method package
+# DCG-CAD: Evidence-governed knowledge-state reasoning for progressive CAD generation under incomplete engineering constraints
 
-GenCore is a selected research-code release for evidence-governed progressive
-CAD generation under incomplete engineering constraints. This package exposes
-the method core and one synthetic example. It is not the production system, the
-complete evaluation corpus, or the dataset planned for a separate release.
+
+Engineering CAD generation depends on coordinated reasoning over requirements, constraints, model states, and validation evidence. These elements are distributed across engineering documents, parametric models, and review processes, and their status can change as a design develops. We propose Dynamic Constraint Graph-mediated CAD (DCG-CAD), an evidence-governed method for progressive CAD generation under incomplete engineering constraints. DCG-CAD represents requirements, objects, constraints, parameters, geometric references, operations, validation evidence, and agent decisions in a versioned dynamic design-state graph. Evidence-governed state revision, version-consistency control, dependency-subgraph inference, and incremental recomputation coordinate knowledge updates with parametric CAD execution. Across 165 ship-equipment-foundation tasks, DCG-CAD achieved a task success rate of 93.3%, a constraint satisfaction rate of 92.1%, and a rule-proxy geometric validity rate of 90.3% under the controlled protocol. The results demonstrate how explicit knowledge states and evidence-linked transitions can support traceable CAD decisions and selective model updates as engineering information evolves.
 
 ## What is included
 
@@ -44,7 +42,7 @@ generator can be used directly:
 import json
 from pathlib import Path
 
-from gencore.scene_generator.scene import assemble_scene_bundle
+from DCG-CAD.scene_generator.scene import assemble_scene_bundle
 
 scene = json.loads(Path("examples/basic_case/scene.json").read_text(encoding="utf-8"))
 bundle = assemble_scene_bundle(scene)
@@ -59,6 +57,10 @@ python -m pytest -q
 
 ## Optional integrations
 
+
+Attention needed!!! To use the pycatia skills provided by DCG-CAD, users need to obtain and install the catia V5 software in a Windows environment. Due to the different COM interfaces of the software, it is not recommended to use catia V6 or higher versions (compatibility may be attempted later). In theory, the method proposed in this article can also be migrated to related software that supports Python operation modeling, such as SolidWorks ,Freecad and OpenSCAD.
+
+
 Install the model-agent adapter only when needed:
 
 ```powershell
@@ -71,34 +73,18 @@ On Windows, install the optional CATIA boundary with:
 python -m pip install -e ".[catia]"
 ```
 
-CATIA V5, its license, and COM configuration are not distributed. The core
-package imports and the included example remain independent of CATIA. The
-public CATIA backend implements session probing and compartment-scene creation;
-production foundation construction, model-update, export, and interference
-scripts are represented by typed interfaces but are intentionally not included.
-
 ## Repository structure
 
 ```text
-src/gencore/              method implementation
-agents/gencore_multi_agent/ optional five-role model adapter
+src/DCG-CAD/              method implementation
+agents/DCG-CAD_multi_agent/ optional five-role model adapter
 examples/basic_case/      synthetic offline example
 schemas/                  public data schema
 tests/                    deterministic tests
 docs/                     method and reproducibility notes
 ```
 
-## Release boundary
-
-This release intentionally excludes service credentials, provider endpoints,
-experiment databases, web workbenches, runtime logs, generated CAD binaries,
-full compartment-scene collections, difficulty labels, hidden oracles, and
-train/validation/test splits. Aggregate evidence reported in the associated
-paper remains part of the article; the expanded dataset will be versioned and
-released separately.
 
 ## License and citation
 
-Before uploading this package, select a software license as described in
-`LICENSE-DECISION.md`. Citation metadata is provided in `CITATION.cff` and
-should be updated with the author list and paper DOI when available.
+Attention needed!!! The paper is currently in the review stage. If you would like to use relevant data or methods, please contact the author team
