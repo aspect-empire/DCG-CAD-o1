@@ -1,8 +1,7 @@
 
 
 
-# DCG-CAD: Evidence-governed knowledge-state reasoning for progressive CAD generation under incomplete engineering constraints
-
+# DATA and CODE for DCG-CAD
 
 Engineering CAD generation depends on coordinated reasoning over requirements, constraints, model states, and validation evidence. These elements are distributed across engineering documents, parametric models, and review processes, and their status can change as a design develops. We propose Dynamic Constraint Graph-mediated CAD (DCG-CAD), an evidence-governed method for progressive CAD generation under incomplete engineering constraints. DCG-CAD represents requirements, objects, constraints, parameters, geometric references, operations, validation evidence, and agent decisions in a versioned dynamic design-state graph. Evidence-governed state revision, version-consistency control, dependency-subgraph inference, and incremental recomputation coordinate knowledge updates with parametric CAD execution. Across 165 ship-equipment-foundation tasks, DCG-CAD achieved a task success rate of 93.3%, a constraint satisfaction rate of 92.1%, and a rule-proxy geometric validity rate of 90.3% under the controlled protocol. The results demonstrate how explicit knowledge states and evidence-linked transitions can support traceable CAD decisions and selective model updates as engineering information evolves.
 
